@@ -1,16 +1,22 @@
 package com.example.myapplication.ui.account;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -22,11 +28,13 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.myapplication.Login_Activity;
 import com.example.myapplication.R;
 import com.example.myapplication.ui.account.ui.AccountFeedFragment;
 import com.example.myapplication.ui.account.ui.AccountGridFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class AccountFragment extends Fragment {
 
@@ -36,6 +44,7 @@ public class AccountFragment extends Fragment {
     Fragment fragment = null;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    FirebaseAuth mAuth;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +52,16 @@ public class AccountFragment extends Fragment {
 
         tabLayout=(TabLayout)root.findViewById(R.id.tab_account);
         frameLayout=(FrameLayout)root.findViewById(R.id.frame_account);
+
+        ImageView img=(ImageView)root.findViewById(R.id.imgacc);
+        TextView tv_name=(TextView) root.findViewById(R.id.tv_name);
+        TextView tv_email=(TextView) root.findViewById(R.id.tv_email);
+        TextView tv_fb=(TextView)root.findViewById(R.id.tv_fb_insta);
+
+        mAuth = FirebaseAuth.getInstance();
+        String email = mAuth.getCurrentUser().getEmail();
+
+        tv_email.setText(email);
 
         fragment = new AccountFeedFragment();
         fragmentManager = getFragmentManager();

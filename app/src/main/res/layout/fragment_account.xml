@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,24 +8,77 @@
     android:orientation="vertical"
     tools:context=".ui.account.AccountFragment">
 
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
         <ImageView
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_person_black_100dp"
-            android:layout_gravity="center"
-            android:layout_width="100dp"
-            android:layout_height="100dp"/>
+            android:id="@+id/imgacc"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/ic_person_black_24dp"/>
 
         <TextView
-            android:layout_marginTop="10dp"
+            android:id="@+id/tv_name"
+            android:layout_toEndOf="@+id/imgacc"
             android:text="Rohit Gadhwar"
-            android:textColor="@android:color/black"
             android:textStyle="bold"
+            android:layout_marginLeft="25dp"
             android:textSize="20dp"
-            android:textAlignment="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgacc" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_below="@+id/tv_name"
+            android:layout_toEndOf="@+id/imgacc"
+            android:text="email"
+            android:layout_marginLeft="25dp"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgacc" />
+
+        <TextView
+            android:id="@+id/tv_fb_insta"
+            android:layout_toEndOf="@+id/imgacc"
+            android:layout_below="@+id/tv_email"
+            android:layout_marginTop="10dp"
+            android:text="My name is Anthony Gonsalves, Mai Dunia me akela huu"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="25dp"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgacc" />
+
+        <TextView
+            android:id="@+id/tv_pname"
+            android:text="rohit_rrg"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/imgacc"
+            android:layout_marginLeft="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+    </RelativeLayout>
 
         <com.google.android.material.tabs.TabLayout
+            android:layout_marginTop="20dp"
             android:id="@+id/tab_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -55,5 +109,6 @@
                 app:srcCompat="@drawable/ic_add_black_24dp" />
 
         </FrameLayout>
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".Login_Activity">
+
+    <RelativeLayout
+        android:id="@+id/rel_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="75dp"
+            android:text="UserID :"
+            android:textAlignment="gravity"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:textColor="#cec9d1"/>
+
+        <EditText
+            android:id="@+id/edit_text_1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_1"
+            android:layout_marginLeft="75dp"
+            android:hint="Email"
+            android:inputType="text"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:layout_below="@+id/edit_text_1"
+            android:id="@+id/textView_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="75dp"
+            android:text="Password :"
+            android:textAlignment="gravity"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:textColor="#cec9d1"/>
+
+        <EditText
+            android:id="@+id/edit_text_2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_2"
+            android:layout_marginLeft="75dp"
+            android:inputType="textPassword"
+            android:hint="password"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Log In"
+        android:textSize="20dp"
+        android:textColor="#cec9d1" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_1"
+        android:text="Forgot Password"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="#cec9d1"/>
+
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_2"
+        android:text="Sign Up"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#cec9d1"/>
+
+</RelativeLayout>

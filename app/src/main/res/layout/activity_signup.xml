@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient1"
+    tools:context=".signup">
+
+    <EditText
+        android:id="@+id/ed1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#fff"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:layout_below="@+id/ed1"
+        android:layout_marginTop="30dp"
+        android:inputType="phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/ed3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Instagram/Facebook"
+        android:layout_below="@+id/ed2"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/ed4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:layout_below="@+id/ed3"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"/>
+
+    <EditText
+        android:id="@+id/ed5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_below="@+id/ed4"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:textColorHint="#fff"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#fff"/>
+
+
+    <EditText
+        android:id="@+id/ed6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/ed5"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColorHint="#fff"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed6"
+        android:layout_marginTop="100dp"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:background="#5DBED1"/>
+
+</RelativeLayout>
